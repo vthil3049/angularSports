@@ -1,0 +1,12 @@
+1. Install Deployed if it is not already there
+2. From Windows Cmd.exe(not from Gitbash), startup dpd using the command:
+	dpd -p 5500 sportstore\app.dpd
+	dashboard
+
+Using the dashboard add the required data collections if they do not exist. Otherwise,
+http://localhost:5500/<collection_name> should display the data
+
+Start webserver for chrome and access the folder for the app
+Enable love reload for the app
+Check if everything works
+
