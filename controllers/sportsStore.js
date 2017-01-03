@@ -12,11 +12,13 @@ angular.module("sportsStore")
     .error(function (error) {
       $scope.data.error = error;
     });
+
     $scope.sendOrder = function (shippingDetails) {
       var order = angular.copy(shippingDetails);
       order.products = cart.getProducts();
       $http.post(orderUrl, order)
       .success(function (data) {
+        console.log(data);
         $scope.data.orderId = data.id;
         cart.getProducts().length = 0;
       })
@@ -26,4 +28,6 @@ angular.module("sportsStore")
         $location.path("/complete");
       });
     }
+
+
   });
